@@ -333,4 +333,8 @@ function goToCheckout() {
 
     window.location.href = "checkout.html";
 
-                           }
+          function openCart() {
+
+    window.location.href = "checkout.html";
+
+          }                 }
