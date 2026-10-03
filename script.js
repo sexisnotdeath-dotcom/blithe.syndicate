@@ -255,4 +255,4 @@ function addToCart() {
         `Added to cart!\n\nColour: ${selectedColour}\nSize: ${selectedSize}\nQuantity: ${quantity}`
     );
 
-}
+       }
