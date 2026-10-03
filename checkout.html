@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BLITHE SYNDICATE — CHECKOUT</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #111;
+        }
+
+        header {
+            padding: 25px 6%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .checkout {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 0 25px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .order {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+
+        .order-name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #111;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        button {
+            width: 100%;
+            padding: 17px;
+            background: #111;
+            color: white;
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .note {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">BLITHE</div>
+    </header>
+
+    <main class="checkout">
+
+        <h1>CHECKOUT</h1>
+
+        <div class="order">
+
+            <div class="order-name">
+                BLITHE SYNDICATE
+            </div>
+
+            <p>
+                Your order will appear here.
+            </p>
+
+        </div>
+
+        <div class="total">
+
+            <span>TOTAL</span>
+
+            <span id="total">
+                KES 0
+            </span>
+
+        </div>
+
+        <label for="phone">
+            M-PESA PHONE NUMBER
+        </label>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="07XXXXXXXX"
+            maxlength="10">
+
+        <button onclick="startPayment()">
+            PAY WITH M-PESA
+        </button>
+
+        <p class="note">
+            You will receive an M-PESA payment prompt
+            on your phone when the payment system is connected.
+        </p>
+
+    </main>
+
+    <script>
+
+        function startPayment() {
+
+            const phone =
+                document.getElementById("phone").value;
+
+            if (!phone) {
+
+                alert("Please enter your M-PESA phone number.");
+
+                return;
+            }
+
+            alert(
+                "M-PESA checkout is being connected. Your payment details have not been charged."
+            );
+
+        }
+
+    </script>
+
+</body>
+
+  </html>
