@@ -50,7 +50,7 @@
         </section>
 
 
-    <section id="shop" class="shop">
+<section id="shop" class="shop">
 
     <h2>NEW DROP</h2>
 
@@ -74,6 +74,61 @@
             </div>
             <h3>BLITHE ANGEL HOODIE</h3>
             <p>KES 4,500</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRODUCT DETAILS -->
+<section id="product-details" class="product-details">
+
+    <button class="back-button" onclick="closeProduct()">← BACK</button>
+
+    <div class="product-detail-layout">
+
+        <div class="product-gallery">
+            <img id="detail-image"
+                 src=""
+                 alt="Product">
+
+            <div class="gallery-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="product-info">
+
+            <p class="small-text">BLITHE SYNDICATE</p>
+
+            <h1 id="detail-name"></h1>
+
+            <p id="detail-price" class="detail-price"></p>
+
+            <p id="detail-description"></p>
+
+            <div class="option-group">
+                <h4>COLOUR</h4>
+                <div id="color-options"></div>
+            </div>
+
+            <div class="option-group">
+                <h4>SIZE</h4>
+                <div id="size-options"></div>
+            </div>
+
+            <div class="quantity">
+                <button onclick="changeQuantity(-1)">−</button>
+                <span id="quantity">1</span>
+                <button onclick="changeQuantity(1)">+</button>
+            </div>
+
+            <button class="add-cart-button" onclick="addToCart()">
+                ADD TO CART
+            </button>
+
         </div>
 
     </div>
