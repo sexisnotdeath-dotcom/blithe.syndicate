@@ -18,12 +18,12 @@ const products = {
             "The Blithe Dominion Hoodie. A statement piece from the new era of Blithe Syndicate.",
 
         colours: {
-            WHITE: "images/hoodie-white.png",
-            BLUE: "images/hoodie-blue.png",
-            GREY: "images/hoodie-grey.png",
-            PINK: "images/hoodie-pink.png",
-            BLACK: "images/hoodie-black.png"
-        },
+    PINK: "images/file_00000000099c82469494e216c8440daa.png",
+    WHITE: "images/file_000000007b4c82468f13bde923ac5148.png",
+    "LIGHT BLUE": "images/file_0000000099c481f49156822df01bab2f.png",
+    GREY: "images/file_00000000994081f4b02894aedadea94d.png",
+    BLACK: "images/file_00000000d4e081f4b38acafb75e2a38b.png"
+},
 
         sizes: [
             "XS",
