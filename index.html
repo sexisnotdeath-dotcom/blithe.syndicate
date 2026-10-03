@@ -13,11 +13,8 @@
 <body>
 
     <!-- HEADER -->
-    <header class="header">
-
-        <div class="logo">
-            BLITHE
-        </div>
+    <header>
+        <div class="logo">BLITHE</div>
 
         <nav>
             <a href="#shop">SHOP</a>
@@ -25,10 +22,9 @@
             <a href="#about">ABOUT</a>
         </nav>
 
-        <button class="cart-button">
+        <div class="cart">
             CART (<span id="cart-count">0</span>)
-        </button>
-
+        </div>
     </header>
 
 
@@ -44,8 +40,8 @@
                 IS YOURS.
             </h1>
 
-            <a href="#shop" class="shop-button">
-                SHOP THE COLLECTION
+            <a href="#shop">
+                SHOP NOW
             </a>
 
         </div>
@@ -56,16 +52,13 @@
     <!-- COLLECTION -->
     <section id="collection" class="collection">
 
-        <p class="label">
-            DECEMBER 2026
-        </p>
+        <p>DECEMBER 2026</p>
 
-        <h2>
-            THE NEW ERA
-        </h2>
+        <h2>THE NEW ERA</h2>
 
-        <p class="collection-text">
-            BLITHE SYNDICATE — BUILT FOR THOSE WHO REFUSE TO BLEND IN.
+        <p>
+            A new collection from Blithe Syndicate.
+            Built for those who refuse to blend in.
         </p>
 
     </section>
@@ -74,24 +67,18 @@
     <!-- SHOP -->
     <section id="shop" class="shop">
 
-        <div class="shop-header">
-
-            <p class="label">
-                BLITHE SYNDICATE
-            </p>
-
-            <h2>
-                SHOP
-            </h2>
-
+        <div class="section-heading">
+            <p>BLITHE SYNDICATE</p>
+            <h2>SHOP</h2>
         </div>
 
 
         <div class="products">
 
+
             <!-- DOMINION HOODIE -->
 
-            <div class="product-card"
+            <div class="product"
                  onclick="openProduct('dominion')">
 
                 <div class="product-image">
@@ -102,24 +89,20 @@
 
                 </div>
 
-                <div class="product-info">
+                <h3>
+                    BLITHE DOMINION HOODIE
+                </h3>
 
-                    <h3>
-                        BLITHE DOMINION HOODIE
-                    </h3>
-
-                    <p>
-                        KES 2,200
-                    </p>
-
-                </div>
+                <p>
+                    KES 2,200
+                </p>
 
             </div>
 
 
             <!-- CROP TOP -->
 
-            <div class="product-card"
+            <div class="product"
                  onclick="openProduct('crop')">
 
                 <div class="product-image">
@@ -130,19 +113,16 @@
 
                 </div>
 
-                <div class="product-info">
+                <h3>
+                    MAKE LOVE NOT WAR CROP TOP
+                </h3>
 
-                    <h3>
-                        MAKE LOVE NOT WAR CROP TOP
-                    </h3>
-
-                    <p>
-                        KES 700
-                    </p>
-
-                </div>
+                <p>
+                    KES 700
+                </p>
 
             </div>
+
 
         </div>
 
@@ -151,21 +131,17 @@
 
     <!-- PRODUCT PAGE -->
 
-    <section id="product-page" class="product-page">
+    <section id="product-page">
 
-        <button
-            class="back-button"
-            onclick="closeProduct()">
-
-            ← BACK TO SHOP
-
+        <button onclick="closeProduct()">
+            ← BACK
         </button>
 
 
-        <div class="product-page-layout">
+        <div class="product-layout">
 
 
-            <!-- PRODUCT IMAGE -->
+            <!-- IMAGE -->
 
             <div class="product-main-image">
 
@@ -177,13 +153,11 @@
             </div>
 
 
-            <!-- PRODUCT INFORMATION -->
+            <!-- INFORMATION -->
 
-            <div class="product-details">
+            <div class="product-information">
 
-                <p class="label">
-                    BLITHE SYNDICATE
-                </p>
+                <p>BLITHE SYNDICATE</p>
 
                 <h1 id="product-name">
                     PRODUCT
@@ -194,39 +168,27 @@
                 </h2>
 
 
-                <p id="product-description"
-                   class="product-description">
-                </p>
+                <p id="product-description"></p>
 
 
                 <!-- COLOUR -->
 
-                <div class="option">
+                <div class="selection">
 
-                    <h4>
-                        COLOUR
-                    </h4>
+                    <strong>COLOUR</strong>
 
-                    <div
-                        id="colour-options"
-                        class="options">
-                    </div>
+                    <div id="colour-options"></div>
 
                 </div>
 
 
                 <!-- SIZE -->
 
-                <div class="option">
+                <div class="selection">
 
-                    <h4>
-                        SIZE
-                    </h4>
+                    <strong>SIZE</strong>
 
-                    <div
-                        id="size-options"
-                        class="options">
-                    </div>
+                    <div id="size-options"></div>
 
                 </div>
 
@@ -250,8 +212,6 @@
                 </div>
 
 
-                <!-- ADD TO CART -->
-
                 <button
                     class="add-cart"
                     onclick="addToCart()">
@@ -271,9 +231,7 @@
 
     <section id="about" class="about">
 
-        <p class="label">
-            THE SYNDICATE
-        </p>
+        <p>THE SYNDICATE</p>
 
         <h2>
             BLITHE ISN'T<br>
@@ -281,9 +239,9 @@
         </h2>
 
         <p>
-            BLITHE SYNDICATE is a Kenyan streetwear label
-            built around individuality, expression and
-            unapologetic design.
+            BLITHE SYNDICATE is a Kenyan streetwear
+            label built around individuality,
+            expression and unapologetic design.
         </p>
 
     </section>
@@ -312,4 +270,4 @@
 
 </body>
 
-    </html>
+</html>
