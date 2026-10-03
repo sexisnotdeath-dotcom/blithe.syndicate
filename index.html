@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,214 +12,304 @@
 
 <body>
 
-    <nav>
-        <div class="logo">BLITHE</div>
+    <!-- HEADER -->
+    <header class="header">
 
-        <div class="menu">
+        <div class="logo">
+            BLITHE
+        </div>
+
+        <nav>
             <a href="#shop">SHOP</a>
             <a href="#collection">COLLECTION</a>
             <a href="#about">ABOUT</a>
-        </div>
+        </nav>
 
-        <div class="cart">CART (0)</div>
-    </nav>
+        <button class="cart-button">
+            CART (<span id="cart-count">0</span>)
+        </button>
 
-    <main>
-
-        <section class="hero">
-            <div class="hero-content">
-                <p class="small-text">BLITHE SYNDICATE</p>
-
-                <h1>WORLD<br>IS YOURS.</h1>
-
-                <a href="#shop" class="button">
-                    ENTER THE SYNDICATE
-                </a>
-            </div>
-        </section>
+    </header>
 
 
-        <section id="collection" class="collection">
-            <p class="small-text">DECEMBER 2026</p>
+    <!-- HERO -->
+    <section class="hero">
 
-            <h2>THE NEW ERA</h2>
+        <div class="hero-content">
 
-            <p class="description">
-                A new collection from Blithe Syndicate.
-                Built for those who refuse to blend in.
-            </p>
-        </section>
+            <p>BLITHE SYNDICATE</p>
 
+            <h1>
+                WORLD<br>
+                IS YOURS.
+            </h1>
 
-<section id="shop" class="shop">
-
-    <h2>NEW DROP</h2>
-
-    <div class="products">
-
-        <!-- CROP TOP -->
-        <div class="product" onclick="openProduct('crop')">
-            <div class="product-image">
-                <img src="Canva AI Image 2 Oct 2026, 14_56_34_20261002_151059_0000.jpg"
-                     alt="Make Love Not War Crop Top">
-            </div>
-            <h3>MAKE LOVE NOT WAR CROP TOP</h3>
-            <p>KES 700</p>
-        </div>
-
-        <!-- ANGEL HOODIE -->
-        <div class="product" onclick="openProduct('hoodie')">
-            <div class="product-image">
-                <img src="images/hoodie-white.png"
-                     alt="Blithe Angel Hoodie">
-            </div>
-            <h3>BLITHE ANGEL HOODIE</h3>
-            <p>KES 2200</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- PRODUCT DETAILS -->
-<section id="product-details" class="product-details">
-
-    <button class="back-button" onclick="closeProduct()">← BACK</button>
-
-    <div class="product-detail-layout">
-
-        <div class="product-gallery">
-            <img id="detail-image"
-                 src=""
-                 alt="Product">
-
-            <div class="gallery-dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-
-        <div class="product-info">
-
-            <p class="small-text">BLITHE SYNDICATE</p>
-
-            <h1 id="detail-name"></h1>
-
-            <p id="detail-price" class="detail-price"></p>
-
-            <p id="detail-description"></p>
-
-            <div class="option-group">
-                <h4>COLOUR</h4>
-                <div id="color-options"></div>
-            </div>
-
-            <div class="option-group">
-                <h4>SIZE</h4>
-                <div id="size-options"></div>
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeQuantity(-1)">−</button>
-                <span id="quantity">1</span>
-                <button onclick="changeQuantity(1)">+</button>
-            </div>
-
-            <button class="add-cart-button" onclick="addToCart()">
-                ADD TO CART
-            </button>
+            <a href="#shop" class="shop-button">
+                SHOP THE COLLECTION
+            </a>
 
         </div>
 
-    </div>
-
-</section>
-
-<!-- PRODUCT DETAILS -->
-<section id="product-details" class="product-details">
-
-    <button class="back-button" onclick="closeProduct()">← BACK</button>
-
-    <div class="product-detail-layout">
-
-        <div class="product-gallery">
-            <img id="detail-image"
-                 src=""
-                 alt="Product">
-
-            <div class="gallery-dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-
-        <div class="product-info">
-
-            <p class="small-text">BLITHE SYNDICATE</p>
-
-            <h1 id="detail-name"></h1>
-
-            <p id="detail-price" class="detail-price"></p>
-
-            <p id="detail-description"></p>
-
-            <div class="option-group">
-                <h4>COLOUR</h4>
-                <div id="color-options"></div>
-            </div>
-
-            <div class="option-group">
-                <h4>SIZE</h4>
-                <div id="size-options"></div>
-            </div>
-
-            <div class="quantity">
-                <button onclick="changeQuantity(-1)">−</button>
-                <span id="quantity">1</span>
-                <button onclick="changeQuantity(1)">+</button>
-            </div>
-
-            <button class="add-cart-button" onclick="addToCart()">
-                ADD TO CART
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-        <section id="about" class="about">
+    <!-- COLLECTION -->
+    <section id="collection" class="collection">
 
-            <p class="small-text">THE SYNDICATE</p>
+        <p class="label">
+            DECEMBER 2026
+        </p>
 
-            <h2>BLITHE ISN'T<br>JUST CLOTHING.</h2>
+        <h2>
+            THE NEW ERA
+        </h2>
 
-            <p>
-                BLITHE SYNDICATE is a Kenyan streetwear label
-                built around individuality, expression and
-                unapologetic design.
+        <p class="collection-text">
+            BLITHE SYNDICATE — BUILT FOR THOSE WHO REFUSE TO BLEND IN.
+        </p>
+
+    </section>
+
+
+    <!-- SHOP -->
+    <section id="shop" class="shop">
+
+        <div class="shop-header">
+
+            <p class="label">
+                BLITHE SYNDICATE
             </p>
 
-        </section>
+            <h2>
+                SHOP
+            </h2>
 
-    </main>
+        </div>
 
+
+        <div class="products">
+
+            <!-- DOMINION HOODIE -->
+
+            <div class="product-card"
+                 onclick="openProduct('dominion')">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/hoodie-white.png"
+                        alt="Blithe Dominion Hoodie">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        BLITHE DOMINION HOODIE
+                    </h3>
+
+                    <p>
+                        KES 2,200
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CROP TOP -->
+
+            <div class="product-card"
+                 onclick="openProduct('crop')">
+
+                <div class="product-image">
+
+                    <img
+                        src="Canva AI Image 2 Oct 2026, 14_56_34_20261002_151059_0000.jpg"
+                        alt="Make Love Not War Crop Top">
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>
+                        MAKE LOVE NOT WAR CROP TOP
+                    </h3>
+
+                    <p>
+                        KES 700
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCT PAGE -->
+
+    <section id="product-page" class="product-page">
+
+        <button
+            class="back-button"
+            onclick="closeProduct()">
+
+            ← BACK TO SHOP
+
+        </button>
+
+
+        <div class="product-page-layout">
+
+
+            <!-- PRODUCT IMAGE -->
+
+            <div class="product-main-image">
+
+                <img
+                    id="product-main-image"
+                    src=""
+                    alt="Product">
+
+            </div>
+
+
+            <!-- PRODUCT INFORMATION -->
+
+            <div class="product-details">
+
+                <p class="label">
+                    BLITHE SYNDICATE
+                </p>
+
+                <h1 id="product-name">
+                    PRODUCT
+                </h1>
+
+                <h2 id="product-price">
+                    KES 0
+                </h2>
+
+
+                <p id="product-description"
+                   class="product-description">
+                </p>
+
+
+                <!-- COLOUR -->
+
+                <div class="option">
+
+                    <h4>
+                        COLOUR
+                    </h4>
+
+                    <div
+                        id="colour-options"
+                        class="options">
+                    </div>
+
+                </div>
+
+
+                <!-- SIZE -->
+
+                <div class="option">
+
+                    <h4>
+                        SIZE
+                    </h4>
+
+                    <div
+                        id="size-options"
+                        class="options">
+                    </div>
+
+                </div>
+
+
+                <!-- QUANTITY -->
+
+                <div class="quantity">
+
+                    <button onclick="changeQuantity(-1)">
+                        −
+                    </button>
+
+                    <span id="quantity">
+                        1
+                    </span>
+
+                    <button onclick="changeQuantity(1)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <!-- ADD TO CART -->
+
+                <button
+                    class="add-cart"
+                    onclick="addToCart()">
+
+                    ADD TO CART
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+
+        <p class="label">
+            THE SYNDICATE
+        </p>
+
+        <h2>
+            BLITHE ISN'T<br>
+            JUST CLOTHING.
+        </h2>
+
+        <p>
+            BLITHE SYNDICATE is a Kenyan streetwear label
+            built around individuality, expression and
+            unapologetic design.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
 
     <footer>
 
-        <div class="logo">BLITHE</div>
+        <div class="logo">
+            BLITHE
+        </div>
 
-        <p>© 2026 BLITHE SYNDICATE</p>
+        <p>
+            © 2026 BLITHE SYNDICATE
+        </p>
 
-        <p>@BLITHE.SYNDICATE</p>
+        <p>
+            @BLITHE.SYNDICATE
+        </p>
 
     </footer>
+
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
