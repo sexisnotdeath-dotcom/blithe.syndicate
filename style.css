@@ -599,5 +599,12 @@ footer p {
     .product-details h1 {
         font-size: 32px;
     }
+#product-page {
+    display: none;
+    padding: 40px 5% 100px;
+}
 
+#product-page.active {
+    display: block;
+}
 }
