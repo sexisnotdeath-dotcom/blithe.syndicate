@@ -8,6 +8,9 @@ let quantity = 1;
 let selectedColour = "";
 let selectedSize = "";
 
+let cart = [];
+
+
 const products = {
 
     dominion: {
@@ -18,12 +21,12 @@ const products = {
             "The Blithe Dominion Hoodie. A statement piece from the new era of Blithe Syndicate.",
 
         colours: {
-    PINK: "images/file_00000000099c82469494e216c8440daa.png",
-    WHITE: "images/file_000000007b4c82468f13bde923ac5148.png",
-    "LIGHT BLUE": "images/file_0000000099c481f49156822df01bab2f.png",
-    GREY: "images/file_00000000994081f4b02894aedadea94d.png",
-    BLACK: "images/file_00000000d4e081f4b38acafb75e2a38b.png"
-},
+            PINK: "images/file_00000000099c82469494e216c8440daa.png",
+            WHITE: "images/file_000000007b4c82468f13bde923ac5148.png",
+            "LIGHT BLUE": "images/file_0000000099c481f49156822df01bab2f.png",
+            GREY: "images/file_00000000994081f4b02894aedadea94d.png",
+            BLACK: "images/file_00000000d4e081f4b38acafb75e2a38b.png"
+        },
 
         sizes: [
             "XS",
@@ -34,6 +37,7 @@ const products = {
             "XXL"
         ]
     },
+
 
     crop: {
         name: "MAKE LOVE NOT WAR CROP TOP",
@@ -68,14 +72,17 @@ function openProduct(productId) {
 
     if (!product) return;
 
+
     document.querySelector(".shop").style.display = "none";
     document.querySelector(".collection").style.display = "none";
     document.querySelector(".hero").style.display = "none";
+
 
     const productPage =
         document.getElementById("product-page");
 
     productPage.classList.add("active");
+
 
     document.getElementById("product-name").textContent =
         product.name;
@@ -113,6 +120,7 @@ function openProduct(productId) {
 
     colourContainer.innerHTML = "";
 
+
     Object.keys(product.colours).forEach(colour => {
 
         const button =
@@ -120,9 +128,11 @@ function openProduct(productId) {
 
         button.textContent = colour;
 
+
         button.onclick = () => {
 
             selectedColour = colour;
+
 
             document
                 .querySelectorAll("#colour-options button")
@@ -130,13 +140,16 @@ function openProduct(productId) {
                     btn.classList.remove("selected")
                 );
 
+
             button.classList.add("selected");
+
 
             document.getElementById(
                 "product-main-image"
             ).src = product.colours[colour];
 
         };
+
 
         colourContainer.appendChild(button);
 
@@ -150,6 +163,7 @@ function openProduct(productId) {
 
     sizeContainer.innerHTML = "";
 
+
     product.sizes.forEach(size => {
 
         const button =
@@ -157,9 +171,11 @@ function openProduct(productId) {
 
         button.textContent = size;
 
+
         button.onclick = () => {
 
             selectedSize = size;
+
 
             document
                 .querySelectorAll("#size-options button")
@@ -167,9 +183,11 @@ function openProduct(productId) {
                     btn.classList.remove("selected")
                 );
 
+
             button.classList.add("selected");
 
         };
+
 
         sizeContainer.appendChild(button);
 
@@ -194,9 +212,11 @@ function closeProduct() {
         .getElementById("product-page")
         .classList.remove("active");
 
+
     document.querySelector(".shop").style.display = "";
     document.querySelector(".collection").style.display = "";
     document.querySelector(".hero").style.display = "";
+
 
     window.scrollTo({
         top: 0,
@@ -214,9 +234,11 @@ function changeQuantity(amount) {
 
     quantity += amount;
 
+
     if (quantity < 1) {
         quantity = 1;
     }
+
 
     document.getElementById("quantity").textContent =
         quantity;
@@ -237,6 +259,7 @@ function addToCart() {
         return;
     }
 
+
     if (!selectedSize) {
 
         alert("Please select a size.");
@@ -245,14 +268,69 @@ function addToCart() {
     }
 
 
+    const productName =
+        document.getElementById("product-name").textContent;
+
+
+    const productPriceText =
+        document.getElementById("product-price").textContent;
+
+
+    const productPrice =
+        Number(
+            productPriceText
+                .replace("KES", "")
+                .replace(/,/g, "")
+                .trim()
+        );
+
+
+    const item = {
+
+        name: productName,
+
+        price: productPrice,
+
+        colour: selectedColour,
+
+        size: selectedSize,
+
+        quantity: quantity
+
+    };
+
+
+    cart.push(item);
+
+
     cartCount += quantity;
+
 
     document.getElementById("cart-count").textContent =
         cartCount;
 
 
-    alert(
-        `Added to cart!\n\nColour: ${selectedColour}\nSize: ${selectedSize}\nQuantity: ${quantity}`
+    /* SAVE CART */
+
+    localStorage.setItem(
+        "blitheCart",
+        JSON.stringify(cart)
     );
 
-       }
+
+    alert(
+        `${productName} added to cart!\n\nColour: ${selectedColour}\nSize: ${selectedSize}\nQuantity: ${quantity}`
+    );
+
+}
+
+
+/* ================================
+   GO TO CHECKOUT
+================================ */
+
+function goToCheckout() {
+
+    window.location.href = "checkout.html";
+
+                           }
