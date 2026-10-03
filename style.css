@@ -607,4 +607,16 @@ footer p {
 #product-page.active {
     display: block;
 }
+}header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+}
+
+.cart {
+    display: block !important;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
 }
